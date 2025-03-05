@@ -1,0 +1,7 @@
+1.	Explain the workflow of git with neat diagram
+2.	What is git, how to stage a file with git add
+3.	What is git, github, gitlab . explain the differences
+4.	How to create a tag, and how can we push it.
+5.	Explain the steps which are necessary to send a project from local repo to remote repo.
+6.	What is a pull request, explain its procedure
+7.	What is fork, why it is necessary.
