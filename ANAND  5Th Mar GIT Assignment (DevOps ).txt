@@ -1,0 +1,172 @@
+1. Workflow of Git with Diagram
+
+Git follows a distributed version control workflow, allowing developers to track changes and collaborate efficiently.
+
+Git Workflow Steps:
+
+Working Directory – Where you modify files.
+
+Staging Area (Index) – Files are added here before committing.
+
+Local Repository – Committed files are stored here.
+
+Remote Repository – Hosted on a server like GitHub/GitLab.
+
+Diagram (One-Way Flow - Local to Remote):
+
+         Working Directory
+               ↓ git add
+         Staging Area (Index)
+               ↓ git commit
+         Local Repository
+               ↓ git push
+         Remote Repository (GitHub/GitLab)
+
+Explanation:
+
+Developers modify files in the working directory.
+
+Staged changes are added to the index using git add.
+
+Committed changes are stored in the local repository using git commit.
+
+Finally, changes are pushed to the remote repository using git push.
+
+Diagram (One-Way Flow - Remote to Local):
+
+         Remote Repository (GitHub/GitLab)
+               ↓ git pull
+         Local Repository
+               ↓ git checkout
+         Staging Area (Index)
+               ↓ git add
+         Working Directory
+
+Explanation:
+
+Changes from the remote repository are pulled into the local repository using git pull.
+
+Developers check out branches and update files.
+
+Staged files are committed locally before pushing again.
+
+
+
+2. What is Git? How to Stage a File with git add
+
+Git: A distributed version control system (VCS) that helps track changes in code.
+
+Methods to Stage a File:
+
+git add <filename>   # Stage a specific file
+git add .            # Stage all modified and new files
+git add -A           # Stage all changes (new, modified, deleted)
+git add -u           # Stage only modified and deleted files
+git add --all        # Same as -A, stages everything
+git add "*.txt"      # Stage all .txt files
+git add --interactive  # Interactive staging
+
+
+
+3. What is Git, GitHub, GitLab? Differences
+
+Git is a distributed version control system (VCS) that allows developers to track changes in their code locally and collaborate with others. It does not provide hosting services for repositories.
+
+GitHub is a cloud-based platform that hosts Git repositories. It provides additional features like pull requests, issue tracking, and limited CI/CD integration. GitHub is owned by Microsoft.
+
+GitLab is another Git repository hosting service, but it is known for its built-in CI/CD capabilities, advanced access control, and self-hosting options. It is owned by GitLab Inc.
+
+Hosting: Git operates locally, while GitHub and GitLab provide cloud-based hosting.
+
+Features: Git tracks code changes; GitHub and GitLab offer repository hosting with additional collaboration tools.
+
+CI/CD Support: Git does not have built-in CI/CD, GitHub has limited CI/CD, and GitLab offers full CI/CD integration.
+
+Issue Tracking: Git does not include issue tracking; GitHub has basic issue tracking, while GitLab offers advanced issue tracking and Kanban boards.
+
+Self-Hosting: Git can be used locally without any hosting. GitHub does not support self-hosting (except in enterprise versions), whereas GitLab allows full self-hosting.
+
+
+
+4. How to Create and Push a Tag
+
+Why Use Tags?Tags are used to mark specific points in the Git history, typically for releases. Unlike branches, tags do not change as development progresses. They are useful for versioning software and keeping track of significant milestones.
+
+Create a tag:
+
+git tag v1.0  # Lightweight tag
+git tag -a v1.0 -m "Version 1.0"  # Annotated tag with a message
+
+Push the tag to remote:
+
+git push origin v1.0  # Push a single tag
+git push --tags       # Push all tags
+
+
+
+5. Steps to Send a Project from Local to Remote Repo
+
+Initialize Git:
+
+git init
+
+Add Remote Repository:
+
+git remote add origin <repo_url>
+
+Stage and Commit Changes:
+
+git add .
+git commit -m "Initial commit"
+
+Push to Remote Repository:
+
+git push -u origin main
+
+
+
+6. What is a Pull Request? Procedure
+
+A Pull Request (PR) is a feature in GitHub/GitLab that allows users to propose changes to a repository.
+
+Steps to Create a Pull Request:
+
+Fork & Clone the repository (if necessary).
+
+Create a new branch:
+
+git checkout -b feature-branch
+
+Make changes & push:
+
+git add .
+git commit -m "Added new feature"
+git push origin feature-branch
+
+Create a PR:
+
+Go to GitHub/GitLab
+
+Navigate to the repository
+
+Click "New Pull Request"
+
+Select the source & target branches
+
+Add a description & submit
+
+
+
+7. What is Fork? Why is it Necessary?
+
+Fork: A copy of a repository under a different account.
+
+Why necessary?
+
+Allows independent development.
+
+Contribute without direct write access.
+
+Enables open-source collaboration.
+
+Useful for experimenting with code changes.
